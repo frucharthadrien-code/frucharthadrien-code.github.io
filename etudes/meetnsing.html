@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meet'n'Sing — Étude de cas · Phare numérique</title>
+  <meta name="description" content="Application mobile Flutter multifonction — karaoké, social, reconnaissance musicale. Étude de cas Phare numérique." />
+  <link rel="stylesheet" href="../css/main.css" />
+  <script src="../js/mobile-persist.js"></script>
+</head>
+<body data-page="meetnsing">
+  <canvas id="matrix-canvas" class="matrix-canvas" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main" data-i18n="common.skip">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="../index.html"><span data-i18n="brand.line1">Phare</span> <span data-i18n="brand.line2" class="brand__accent">numérique</span></a>
+      <div class="nav-bar">
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" data-i18n="common.menu">Menu</button>
+        <nav class="nav nav-panel" id="site-nav" data-nav data-i18n-aria="common.navLabel" aria-label="Principale">
+          <a href="../index.html" data-i18n="nav.home">Accueil</a>
+          <a href="../travaux.html" aria-current="page" data-i18n="nav.works">Travaux</a>
+          <a href="../a-propos.html" data-i18n="nav.about">À propos</a>
+          <a href="../contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="case-page">
+    <header class="page-hero case-page__hero">
+      <div class="wrap reveal">
+        <p class="case-kicker"><a href="../travaux.html" data-i18n="common.backWorks">← Travaux</a> · <span data-i18n="mns.kicker">Application mobile</span></p>
+        <h1>Meet'n'Sing</h1>
+        <p data-i18n="mns.lead">App sociale autour de la musique et du karaoké — conçue et développée en Flutter, de l'idée à l'interface que tu vois ici.</p>
+        <ul class="stack-tags case-page__tags">
+          <li>Flutter</li>
+          <li>Firebase</li>
+          <li data-i18n="mns.tag.maps">Cartes &amp; géoloc</li>
+          <li data-i18n="mns.tag.chat">Messagerie</li>
+          <li data-i18n="mns.tag.audio">Reconnaissance audio</li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="case-stats wrap reveal" data-i18n-aria="mns.stats.aria" aria-label="En chiffres">
+      <div class="case-stats__item">
+        <span class="case-stats__num">70k+</span>
+        <span class="case-stats__label" data-i18n="mns.stats.lines">lignes de code</span>
+      </div>
+      <div class="case-stats__item">
+        <span class="case-stats__num">25+</span>
+        <span class="case-stats__label" data-i18n="mns.stats.screens">écrans</span>
+      </div>
+      <div class="case-stats__item">
+        <span class="case-stats__num">3</span>
+        <span class="case-stats__label" data-i18n="mns.stats.langs">langues (FR · EN · RU)</span>
+      </div>
+    </section>
+
+    <section class="case-feature wrap reveal" data-i18n-aria="mns.preview.aria" aria-label="Aperçu principal">
+      <figure class="phone-frame phone-frame--hero">
+        <img src="../assets/meetnsing/01-accueil.png" data-i18n-alt="mns.hero.alt" alt="Écran d'accueil Meet'n'Sing — tableau de bord avec navigation principale" width="400" height="800" loading="eager" />
+        <figcaption data-i18n="mns.hero.caption">Accueil — hub de l'app</figcaption>
+      </figure>
+    </section>
+
+    <section class="section case-gallery-section">
+      <div class="wrap">
+        <p class="eyebrow reveal" data-i18n="mns.gallery.eyebrow">Captures</p>
+        <h2 class="case-gallery__title reveal" data-i18n="mns.gallery.title">Un produit complet, pas une démo</h2>
+        <div class="case-gallery">
+          <figure class="phone-frame reveal">
+            <img src="../assets/meetnsing/07-echo.png" data-i18n-alt="mns.alt.echo" alt="Écran Écho — reconnaissance musicale" width="400" height="800" loading="eager" />
+            <figcaption data-i18n-html="mns.cap.echo"><strong>Écho</strong> — identifier un titre en un geste (type Shazam)</figcaption>
+          </figure>
+          <figure class="phone-frame reveal">
+            <img src="../assets/meetnsing/06-hathor-genie.png" data-i18n-alt="mns.alt.hathor" alt="Assistant Hathor — playlist guidée" width="400" height="800" loading="eager" />
+            <figcaption data-i18n-html="mns.cap.hathor"><strong>Hathor</strong> — assistant &amp; playlists guidées</figcaption>
+          </figure>
+          <figure class="phone-frame reveal">
+            <img src="../assets/meetnsing/04-detections.png" data-i18n-alt="mns.alt.detect" alt="Historique des détections musicales" width="400" height="800" loading="eager" />
+            <figcaption data-i18n-html="mns.cap.detect"><strong>Détections</strong> — historique &amp; bibliothèque</figcaption>
+          </figure>
+          <figure class="phone-frame reveal">
+            <img src="../assets/meetnsing/03-affiche.png" data-i18n-alt="mns.alt.affiche" alt="L'Affiche — découverte musicale" width="400" height="800" loading="eager" />
+            <figcaption data-i18n-html="mns.cap.affiche"><strong>L'Affiche</strong> — tendances &amp; nouveautés par pays</figcaption>
+          </figure>
+          <figure class="phone-frame reveal">
+            <img src="../assets/meetnsing/02-profil.png" data-i18n-alt="mns.alt.profil" alt="Profil utilisateur personnalisable" width="400" height="800" loading="eager" />
+            <figcaption data-i18n-html="mns.cap.profil"><strong>Profil</strong> — styles, langues, géolocalisation</figcaption>
+          </figure>
+          <figure class="phone-frame reveal">
+            <img src="../assets/meetnsing/05-hathor-lampe.png" data-i18n-alt="mns.alt.lampe" alt="Mini-jeu lampe magique Hathor" width="400" height="800" loading="eager" />
+            <figcaption data-i18n-html="mns.cap.lampe"><strong>Lampe</strong> — parcours ludique intégré</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap prose reveal">
+        <h2 data-i18n="mns.h2.what">Ce que fait l'app (en clair)</h2>
+        <p data-i18n-html="mns.p1">
+          Meet'n'Sing, c'est une <strong>application mobile multifonction</strong> pour les amateurs de chant et de karaoké :
+          trouver des lieux près de chez soi, découvrir des titres, échanger avec d'autres membres, organiser des événements,
+          et même reconnaître une musique qui passe à la radio.
+        </p>
+        <p data-i18n="mns.p2">
+          Tout est pensé pour tenir sur un téléphone : interface soignée, plusieurs langues, compte sécurisé,
+          notifications, messagerie entre membres.
+        </p>
+
+        <h2 data-i18n="mns.h2.built">Ce que j'ai construit</h2>
+        <ul>
+          <li data-i18n-html="mns.li1"><strong>Tableau de bord</strong> — navigation vers tous les modules (profil, karaokés, chansons, messages…)</li>
+          <li data-i18n-html="mns.li2"><strong>Karaokés sur carte</strong> — repérage des bars et salles (Google Maps ou Yandex selon le pays)</li>
+          <li data-i18n-html="mns.li3"><strong>Catalogue local</strong> — milliers de titres consultables hors ligne sur le téléphone</li>
+          <li data-i18n-html="mns.li4"><strong>Écho</strong> — enregistre un extrait audio et retrouve le morceau</li>
+          <li data-i18n-html="mns.li5"><strong>L'Affiche</strong> — page découverte avec les hits et nouveautés par pays</li>
+          <li data-i18n-html="mns.li6"><strong>Social</strong> — profils, filtres membres, chat, événements, crédits de contact</li>
+          <li data-i18n-html="mns.li7"><strong>Hathor</strong> — expérience narrative pour composer des playlists</li>
+        </ul>
+
+        <h2 data-i18n="mns.h2.tech">Sous le capot (version courte)</h2>
+        <p data-i18n-html="mns.p3">
+          Développée en <strong>Flutter</strong> (Android &amp; iOS), avec <strong>Firebase</strong> pour les comptes,
+          la base de données, le stockage fichiers et les notifications.
+          Backend cloud pour la reconnaissance musicale et la mise à jour des tendances.
+          Interface traduite en français, anglais et russe.
+        </p>
+        <p data-i18n="mns.p4">
+          Projet abouti sur plusieurs mois — architecture modulaire, des dizaines de services métier,
+          polish visuel (thèmes, animations, assets sur mesure).
+        </p>
+
+        <a class="live-link" href="../travaux.html" data-i18n="mns.back">← Retour aux travaux</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span data-i18n="common.footerShort">© Phare numérique</span>
+      <span class="site-footer__links">
+        <a href="../index.html" class="mobile-exit-link" data-clear-mobile data-i18n="common.desktopVersion">Version bureau</a>
+        <a href="../contact.html" data-i18n="common.contactLink">Contact</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/nav-menu.js" defer></script>
+  <script src="../js/matrix.js" defer></script>
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

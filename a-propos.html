@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>À propos — Phare numérique</title>
+  <meta name="description" content="Développeur web &amp; mobile à distance — WordPress, Flutter." />
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="js/mobile-persist.js"></script>
+</head>
+<body data-page="about">
+  <canvas id="matrix-canvas" class="matrix-canvas" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main" data-i18n="common.skip">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html"><span data-i18n="brand.line1">Phare</span> <span data-i18n="brand.line2" class="brand__accent">numérique</span></a>
+      <div class="nav-bar">
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" data-i18n="common.menu">Menu</button>
+        <nav class="nav nav-panel" id="site-nav" data-nav data-i18n-aria="common.navLabel" aria-label="Principale">
+          <a href="index.html" data-i18n="nav.home">Accueil</a>
+          <a href="travaux.html" data-i18n="nav.works">Travaux</a>
+          <a href="a-propos.html" aria-current="page" data-i18n="nav.about">À propos</a>
+          <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-hero">
+      <div class="wrap reveal">
+        <h1 data-i18n="about.title">À propos</h1>
+        <p data-i18n="about.lead">Phare numérique — développement web et mobile à distance, du site vitrine à l'application complète.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="wrap prose reveal">
+        <p data-i18n="about.p1">Je conçois et développe des sites WordPress sur mesure, des migrations propres et des applications Flutter — en remote, avec un dialogue clair et des livrables qui tiennent la route.</p>
+        <p data-i18n="about.p2">Je travaille avec des clients qui veulent un interlocuteur technique fiable, pas une usine à templates.</p>
+        <a class="btn btn--primary" href="contact.html" data-i18n="index.cta.contact">Me contacter</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span data-i18n="common.footerShort">© Phare numérique</span>
+      <a href="contact.html" data-i18n="common.contactLink">Contact</a>
+      <a href="index.html" class="mobile-exit-link" data-clear-mobile data-i18n="common.desktopVersion">Version bureau</a>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js" defer></script>
+  <script src="js/nav-menu.js" defer></script>
+  <script src="js/matrix.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

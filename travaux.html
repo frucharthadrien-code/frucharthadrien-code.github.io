@@ -6,28 +6,32 @@
   <title>Travaux — Phare numérique</title>
   <meta name="description" content="Études de cas WordPress, migrations et Flutter — Phare numérique." />
   <link rel="stylesheet" href="css/main.css" />
+  <script src="js/mobile-persist.js"></script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Aller au contenu</a>
+<body data-page="works">
+  <canvas id="matrix-canvas" class="matrix-canvas" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main" data-i18n="common.skip">Aller au contenu</a>
 
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="brand" href="index.html">Phare <span>numérique</span></a>
-      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav class="nav" id="site-nav" data-nav aria-label="Principale">
-        <a href="index.html">Accueil</a>
-        <a href="travaux.html" aria-current="page">Travaux</a>
-        <a href="a-propos.html">À propos</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <a class="brand" href="index.html"><span data-i18n="brand.line1">Phare</span> <span data-i18n="brand.line2" class="brand__accent">numérique</span></a>
+      <div class="nav-bar">
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" data-i18n="common.menu">Menu</button>
+        <nav class="nav nav-panel" id="site-nav" data-nav data-i18n-aria="common.navLabel" aria-label="Principale">
+          <a href="index.html" data-i18n="nav.home">Accueil</a>
+          <a href="travaux.html" aria-current="page" data-i18n="nav.works">Travaux</a>
+          <a href="a-propos.html" data-i18n="nav.about">À propos</a>
+          <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main id="main">
     <header class="page-hero">
       <div class="wrap reveal">
-        <h1>Travaux</h1>
-        <p>Études de cas réelles — migration, WordPress métier, application Flutter. Pas de fausses vitrines.</p>
+        <h1 data-i18n="works.title">Travaux</h1>
+        <p data-i18n="works.lead">Études de cas réelles — migration, WordPress métier, application Flutter. Pas de fausses vitrines.</p>
       </div>
     </header>
 
@@ -38,30 +42,20 @@
             <a class="work-item reveal" href="etudes/fruchart-equilibre.html">
               <span class="work-item__num">01</span>
               <span>
-                <p class="work-item__title">Fruchart Équilibre</p>
-                <p class="work-item__meta">Migration Wix → WordPress / Elementor · PHP mu-plugins · SMTP · Schema.org · PC &amp; mobile</p>
+                <p class="work-item__title" data-i18n="index.w1.title">Fruchart Équilibre</p>
+                <p class="work-item__meta" data-i18n="works.w1.meta">Migration Wix → WordPress / Elementor · PHP mu-plugins · SMTP · Schema.org · PC &amp; mobile</p>
               </span>
-              <span class="work-item__go">Lire →</span>
-            </a>
-          </li>
-          <li>
-            <a class="work-item reveal" href="etudes/fruchart-assistance.html">
-              <span class="work-item__num">02</span>
-              <span>
-                <p class="work-item__title">Fruchart Assistance</p>
-                <p class="work-item__meta">Conception et maintenance d’un site WordPress — stack CMS, intégration front, structure éditoriale</p>
-              </span>
-              <span class="work-item__go">Lire →</span>
+              <span class="work-item__go" data-i18n="common.read">Lire →</span>
             </a>
           </li>
           <li>
             <a class="work-item reveal" href="etudes/meetnsing.html">
-              <span class="work-item__num">03</span>
+              <span class="work-item__num">02</span>
               <span>
-                <p class="work-item__title">Meet'n'Sing</p>
-                <p class="work-item__meta">App mobile Flutter — parcours utilisateur, écrans, livraison</p>
+                <p class="work-item__title" data-i18n="index.w2.title">Meet'n'Sing</p>
+                <p class="work-item__meta" data-i18n="works.w2.meta">App mobile Flutter — parcours utilisateur, écrans, livraison</p>
               </span>
-              <span class="work-item__go">Lire →</span>
+              <span class="work-item__go" data-i18n="common.read">Lire →</span>
             </a>
           </li>
         </ul>
@@ -71,11 +65,15 @@
 
   <footer class="site-footer">
     <div class="site-footer__inner">
-      <span>© Phare numérique</span>
-      <a href="contact.html">Discuter d’un projet</a>
+      <span data-i18n="common.footerShort">© Phare numérique</span>
+      <a href="contact.html" data-i18n="common.discuss">Discuter d'un projet</a>
+      <a href="index.html" class="mobile-exit-link" data-clear-mobile data-i18n="common.desktopVersion">Version bureau</a>
     </div>
   </footer>
 
+  <script src="js/i18n.js" defer></script>
+  <script src="js/nav-menu.js" defer></script>
+  <script src="js/matrix.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>

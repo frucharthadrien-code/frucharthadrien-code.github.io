@@ -1,24 +1,7 @@
 /**
- * Portfolio Hadrien Fruchart — motion + nav
+ * Portfolio Hadrien Fruchart — motion
  */
 (function () {
-  const nav = document.querySelector("[data-nav]");
-  const toggle = document.querySelector("[data-nav-toggle]");
-
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      const open = nav.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-
-    nav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        nav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-      });
-    });
-  }
-
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const nodes = document.querySelectorAll(".reveal");
 
@@ -29,6 +12,10 @@
     return;
   }
 
+  const isMobileView =
+    window.matchMedia("(max-width: 760px)").matches ||
+    document.documentElement.classList.contains("force-mobile");
+
   const io = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -38,8 +25,19 @@
         }
       });
     },
-    { rootMargin: "0px 0px -8% 0px", threshold: 0.12 }
+    isMobileView
+      ? { rootMargin: "0px 0px 8% 0px", threshold: 0.01 }
+      : { rootMargin: "0px 0px -8% 0px", threshold: 0.12 }
   );
 
   nodes.forEach((el) => io.observe(el));
+
+  /* Galerie case study : sécurité mobile si l'IO rate un bloc */
+  if (isMobileView && document.body.classList.contains("case-page")) {
+    window.setTimeout(function () {
+      document.querySelectorAll(".case-gallery .phone-frame.reveal:not(.is-in), .case-gallery .shot-frame.reveal:not(.is-in)").forEach(function (el) {
+        el.classList.add("is-in");
+      });
+    }, 600);
+  }
 })();

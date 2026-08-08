@@ -1,28 +1,25 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="force-mobile">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Phare numérique — Développement web &amp; mobile à distance</title>
-  <meta name="description" content="Phare numérique — WordPress, Elementor, PHP et Flutter. Sites sur mesure, migrations, apps — à distance." />
-  <meta property="og:title" content="Phare numérique — Développement web & mobile" />
-  <meta property="og:description" content="Sites sur mesure, migrations WordPress, Flutter — à distance." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://frucharthadrien-code.github.io/assets/portrait.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Phare numérique — mobile</title>
+  <meta name="description" content="Phare numérique — version mobile. WordPress, Flutter, à distance." />
+  <link rel="canonical" href="index.html" />
   <link rel="stylesheet" href="css/main.css" />
   <script src="js/mobile-persist.js"></script>
 </head>
-<body data-page="index">
+<body data-page="mobile">
   <canvas id="matrix-canvas" class="matrix-canvas" aria-hidden="true"></canvas>
   <a class="skip-link" href="#main" data-i18n="common.skip">Aller au contenu</a>
 
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="brand" href="index.html"><span data-i18n="brand.line1">Phare</span> <span data-i18n="brand.line2" class="brand__accent">numérique</span></a>
+      <a class="brand" href="mobile.html"><span data-i18n="brand.line1">Phare</span> <span data-i18n="brand.line2" class="brand__accent">numérique</span></a>
       <div class="nav-bar">
         <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" data-i18n="common.menu">Menu</button>
         <nav class="nav nav-panel" id="site-nav" data-nav data-i18n-aria="common.navLabel" aria-label="Principale">
-          <a href="index.html" aria-current="page" data-i18n="nav.home">Accueil</a>
+          <a href="mobile.html" aria-current="page" data-i18n="nav.home">Accueil</a>
           <a href="travaux.html" data-i18n="nav.works">Travaux</a>
           <a href="a-propos.html" data-i18n="nav.about">À propos</a>
           <a href="contact.html" data-i18n="nav.contact">Contact</a>
@@ -85,11 +82,10 @@
 
   <footer class="site-footer">
     <div class="site-footer__inner">
-      <span data-i18n="common.footerTag">© Phare numérique — WordPress · Flutter · à distance</span>
+      <span data-i18n="common.footerShort">© Phare numérique</span>
       <span class="site-footer__links">
-        <a href="mobile.html" class="mobile-enter-link" data-set-mobile data-i18n="common.mobileVersion">Version mobile</a>
-        <a href="index.html" class="mobile-exit-link" data-clear-mobile data-i18n="common.desktopVersion">Version bureau</a>
-        <a href="mailto:frucharthadrien@gmail.com">frucharthadrien@gmail.com</a>
+        <a href="index.html" data-clear-mobile data-i18n="common.desktopVersion">Version bureau</a>
+        <a href="mailto:frucharthadrien@gmail.com" data-i18n="common.contactLink">Contact</a>
       </span>
     </div>
   </footer>
