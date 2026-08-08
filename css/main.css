@@ -1,5 +1,5 @@
 /* Phare numérique — matrix noir / blanc */
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Share+Tech+Mono&display=swap");
+/* Polices chargées via <link> dans le HTML (évite @import + cache) */
 
 :root {
   --bg: #030a06;
@@ -351,11 +351,11 @@ a:hover {
   );
 }
 
-.hero__portrait--gommage .hero__portrait-frame img {
+.hero__portrait--gommage.is-gommage-running .hero__portrait-frame img {
   opacity: 0;
 }
 
-.hero__portrait--gommage.is-gommage-done .hero__portrait-frame img {
+.hero__portrait--gommage.is-gommage-done:not(.is-gommage-fallback) .hero__portrait-frame img {
   opacity: 0;
 }
 

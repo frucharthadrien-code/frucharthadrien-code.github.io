@@ -13,9 +13,19 @@
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (reduceMotion) {
-    portrait.classList.add("is-gommage-done");
+    portrait.classList.add("is-gommage-done", "is-gommage-fallback");
     return;
   }
+
+  portrait.classList.add("is-gommage-running");
+
+  var fallbackTimer = window.setTimeout(function () {
+    if (portrait.classList.contains("is-gommage-done")) return;
+    portrait.classList.remove("is-gommage-running");
+    portrait.classList.add("is-gommage-done", "is-gommage-fallback");
+    var stuck = portrait.querySelector(".hero__portrait-gommage");
+    if (stuck && stuck.parentNode) stuck.parentNode.removeChild(stuck);
+  }, 4500);
 
   var canvas = document.createElement("canvas");
   canvas.className = "hero__portrait-gommage";
@@ -275,10 +285,12 @@
   }
 
   function finishGommage() {
+    window.clearTimeout(fallbackTimer);
     var ctx = canvas.getContext("2d");
     var w = canvas.width;
     var h = canvas.height;
     paintPortrait(ctx, w, h, 1.12, 1, false);
+    portrait.classList.remove("is-gommage-running");
     portrait.classList.add("is-gommage-done");
   }
 
