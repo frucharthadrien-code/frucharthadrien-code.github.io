@@ -232,13 +232,19 @@
     }
   }
 
+  function isMobilePortrait() {
+    return window.matchMedia("(max-width: 760px)").matches ||
+      document.documentElement.classList.contains("force-mobile");
+  }
+
   function coverRect(cw, ch, iw, ih) {
+    var posY = isMobilePortrait() ? 0.26 : 0.12;
     var scale = Math.max(cw / iw, ch / ih) * 1.02;
     var dw = iw * scale;
     var dh = ih * scale;
     return {
       dx: (cw - dw) * 0.5,
-      dy: (ch - dh) * 0.12,
+      dy: (ch - dh) * posY,
       dw: dw,
       dh: dh
     };
