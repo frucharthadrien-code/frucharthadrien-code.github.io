@@ -1368,24 +1368,24 @@ body.nav-menu-open .case-feature {
       linear-gradient(
         to left,
         var(--bg) 0%,
-        rgba(3, 10, 6, 0.92) 14%,
-        rgba(3, 10, 6, 0.35) 30%,
-        transparent 48%
+        rgba(3, 10, 6, 0.72) 5%,
+        rgba(3, 10, 6, 0.2) 11%,
+        transparent 19%
       ),
       linear-gradient(
         128deg,
         var(--bg) 0%,
-        rgba(3, 10, 6, 0.92) 16%,
-        rgba(3, 10, 6, 0.35) 34%,
-        transparent 52%
+        rgba(3, 10, 6, 0.62) 7%,
+        rgba(3, 10, 6, 0.16) 13%,
+        transparent 21%
       ),
       linear-gradient(
         180deg,
         var(--bg) 0%,
-        rgba(3, 10, 6, 0.88) 10%,
-        rgba(3, 10, 6, 0.45) 22%,
-        rgba(3, 10, 6, 0.08) 36%,
-        transparent 48%
+        rgba(3, 10, 6, 0.68) 5%,
+        rgba(3, 10, 6, 0.22) 11%,
+        rgba(3, 10, 6, 0.05) 17%,
+        transparent 23%
       );
   }
 
@@ -1401,14 +1401,14 @@ body.nav-menu-open .case-feature {
   .hero__portrait img {
     object-position: center 26%;
     -webkit-mask-image:
-      linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.35) 12%, #000 26%, #000 100%),
-      linear-gradient(128deg, transparent 0%, rgba(0, 0, 0, 0.35) 14%, #000 28%, #000 100%),
-      linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 10%, #000 24%, #000 100%);
+      linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.45) 4%, #000 13%, #000 100%),
+      linear-gradient(128deg, transparent 0%, rgba(0, 0, 0, 0.3) 7%, #000 17%, #000 100%),
+      linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.45) 4%, #000 15%, #000 100%);
     -webkit-mask-composite: source-in;
     mask-image:
-      linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.35) 12%, #000 26%, #000 100%),
-      linear-gradient(128deg, transparent 0%, rgba(0, 0, 0, 0.35) 14%, #000 28%, #000 100%),
-      linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 10%, #000 24%, #000 100%);
+      linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.45) 4%, #000 13%, #000 100%),
+      linear-gradient(128deg, transparent 0%, rgba(0, 0, 0, 0.3) 7%, #000 17%, #000 100%),
+      linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.45) 4%, #000 15%, #000 100%);
     mask-composite: intersect;
   }
 
@@ -1555,24 +1555,24 @@ html.force-mobile .hero__portrait::after {
     linear-gradient(
       to left,
       var(--bg) 0%,
-      rgba(3, 10, 6, 0.92) 14%,
-      rgba(3, 10, 6, 0.35) 30%,
-      transparent 48%
+      rgba(3, 10, 6, 0.72) 5%,
+      rgba(3, 10, 6, 0.2) 11%,
+      transparent 19%
     ),
     linear-gradient(
       128deg,
       var(--bg) 0%,
-      rgba(3, 10, 6, 0.92) 16%,
-      rgba(3, 10, 6, 0.35) 34%,
-      transparent 52%
+      rgba(3, 10, 6, 0.62) 7%,
+      rgba(3, 10, 6, 0.16) 13%,
+      transparent 21%
     ),
     linear-gradient(
       180deg,
       var(--bg) 0%,
-      rgba(3, 10, 6, 0.88) 10%,
-      rgba(3, 10, 6, 0.45) 22%,
-      rgba(3, 10, 6, 0.08) 36%,
-      transparent 48%
+      rgba(3, 10, 6, 0.68) 5%,
+      rgba(3, 10, 6, 0.22) 11%,
+      rgba(3, 10, 6, 0.05) 17%,
+      transparent 23%
     );
 }
 
@@ -1588,14 +1588,14 @@ html.force-mobile .hero__portrait-frame {
 html.force-mobile .hero__portrait img {
   object-position: center 26%;
   -webkit-mask-image:
-    linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.35) 12%, #000 26%, #000 100%),
-    linear-gradient(128deg, transparent 0%, rgba(0, 0, 0, 0.35) 14%, #000 28%, #000 100%),
-    linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 10%, #000 24%, #000 100%);
+    linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.45) 4%, #000 13%, #000 100%),
+    linear-gradient(128deg, transparent 0%, rgba(0, 0, 0, 0.3) 7%, #000 17%, #000 100%),
+    linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.45) 4%, #000 15%, #000 100%);
   -webkit-mask-composite: source-in;
   mask-image:
-    linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.35) 12%, #000 26%, #000 100%),
-    linear-gradient(128deg, transparent 0%, rgba(0, 0, 0, 0.35) 14%, #000 28%, #000 100%),
-    linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 10%, #000 24%, #000 100%);
+    linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.45) 4%, #000 13%, #000 100%),
+    linear-gradient(128deg, transparent 0%, rgba(0, 0, 0, 0.3) 7%, #000 17%, #000 100%),
+    linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.45) 4%, #000 15%, #000 100%);
   mask-composite: intersect;
 }
 
