@@ -1,14 +1,13 @@
 /**
- * Contact — FormSubmit AJAX → confirmation Phare (sans page anglaise FormSubmit)
+ * Contact — FormSubmit POST natif → contact-envoye.html?lang=…
  */
 (function () {
   var LIVE_CONFIRM =
     "https://frucharthadrien-code.github.io/contact-envoye.html";
-  var AJAX_URL = "https://formsubmit.co/ajax/frucharthadrien@gmail.com";
   var form = document.getElementById("contact-form");
+  var nextInput = document.getElementById("formsubmit-next");
   var replyInput = document.getElementById("formsubmit-replyto");
   var fileWarn = document.getElementById("contact-file-warning");
-  var formError = document.getElementById("contact-form-error");
   var submitBtn = form && form.querySelector('[type="submit"]');
 
   function t(key) {
@@ -39,21 +38,12 @@
     return base + "?lang=" + encodeURIComponent(lang);
   }
 
-  function showError() {
-    if (!formError) return;
-    formError.hidden = false;
-    formError.textContent = t("contact.form.error");
-  }
-
-  function hideError() {
-    if (formError) formError.hidden = true;
-  }
-
-  function resetSubmitBtn() {
-    if (!submitBtn) return;
-    submitBtn.disabled = false;
-    submitBtn.removeAttribute("aria-disabled");
-    submitBtn.textContent = t("contact.submit");
+  function syncHiddenFields() {
+    if (nextInput) nextInput.value = confirmUrl();
+    var emailEl = document.getElementById("contact-email");
+    if (replyInput && emailEl) {
+      replyInput.value = emailEl.value.trim();
+    }
   }
 
   function setSubmitting(on) {
@@ -74,47 +64,15 @@
 
   if (!form) return;
 
+  syncHiddenFields();
+
   form.addEventListener("submit", function (ev) {
     if (form.getAttribute("data-local-blocked") === "true") {
       ev.preventDefault();
       return;
     }
-
-    ev.preventDefault();
-    hideError();
-
-    var emailEl = document.getElementById("contact-email");
-    if (replyInput && emailEl) {
-      replyInput.value = emailEl.value.trim();
-    }
-
+    syncHiddenFields();
     setSubmitting(true);
-
-    fetch(AJAX_URL, {
-      method: "POST",
-      body: new FormData(form),
-      headers: { Accept: "application/json" }
-    })
-      .then(function (res) {
-        return res.json().then(function (data) {
-          return { ok: res.ok, data: data };
-        });
-      })
-      .then(function (result) {
-        var ok =
-          result.data &&
-          (result.data.success === "true" || result.data.success === true);
-        if (ok) {
-          window.location.href = confirmUrl();
-          return;
-        }
-        throw new Error(
-          (result.data && result.data.message) || "FormSubmit error"
-        );
-      })
-      .catch(function () {
-        showError();
-        resetSubmitBtn();
-      });
+    /* POST natif — FormSubmit redirige vers _next (contact-envoye.html) */
   });
 })();
