@@ -2063,6 +2063,13 @@ html.force-mobile body {
   margin-top: 1.75rem;
 }
 
+.contact-form__error {
+  margin: 0.5rem 0 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #ffb4a8;
+}
+
 .contact-form__submit:disabled {
   opacity: 0.45;
   cursor: not-allowed;

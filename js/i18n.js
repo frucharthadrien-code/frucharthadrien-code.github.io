@@ -96,6 +96,8 @@
       "contact.fileWarning": "Le formulaire ne fonctionne pas en double-clic sur le fichier HTML. Testez via GitHub Pages ou lancez un serveur local dans le dossier Portfolio : python -m http.server 8080 puis http://localhost:8080/contact.html",
       "contact.alt": "Ou par e-mail :",
       "contact.form.aria": "Formulaire de contact",
+      "contact.form.sending": "Envoi en cours…",
+      "contact.form.error": "L'envoi a échoué. Réessayez ou écrivez à frucharthadrien@gmail.com.",
       "contact.email": "frucharthadrien@gmail.com",
       "contact.note": "Réponse sous 48 h · français, anglais, russe.",
 
@@ -345,6 +347,8 @@
       "contact.fileWarning": "The form does not work when opening the HTML file directly. Use GitHub Pages or run a local server in Portfolio: python -m http.server 8080 then http://localhost:8080/contact.html",
       "contact.alt": "Or by email:",
       "contact.form.aria": "Contact form",
+      "contact.form.sending": "Sending…",
+      "contact.form.error": "Sending failed. Try again or email frucharthadrien@gmail.com.",
       "contact.email": "frucharthadrien@gmail.com",
       "contact.note": "Reply within 48 h · French, English, Russian.",
 
@@ -594,6 +598,8 @@
       "contact.fileWarning": "Форма не работает при открытии HTML двойным щелчком. Используйте GitHub Pages или локальный сервер в Portfolio: python -m http.server 8080, затем http://localhost:8080/contact.html",
       "contact.alt": "Или по e-mail:",
       "contact.form.aria": "Форма связи",
+      "contact.form.sending": "Отправка…",
+      "contact.form.error": "Не удалось отправить. Повторите или напишите на frucharthadrien@gmail.com.",
       "contact.email": "frucharthadrien@gmail.com",
       "contact.note": "Ответ в течение 48 ч · французский, английский, русский.",
 
