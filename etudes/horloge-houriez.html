@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Horloge Houriez — Étude de cas · Phare numérique</title>
+  <meta name="description" content="Horloge de bureau Windows — Tauri, Rust, WebView2. Heure locale exacte, quel que soit le pays de l'utilisateur." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Share+Tech+Mono&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/main.css?v=20260814" />
+  <script src="../js/mobile-persist.js?v=20260814"></script>
+</head>
+<body data-page="horloge">
+  <canvas id="matrix-canvas" class="matrix-canvas" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main" data-i18n="common.skip">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="../index.html"><span data-i18n="brand.line1">Phare</span> <span data-i18n="brand.line2" class="brand__accent">numérique</span></a>
+      <div class="nav-bar">
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" data-i18n="common.menu">Menu</button>
+        <nav class="nav nav-panel" id="site-nav" data-nav data-i18n-aria="common.navLabel" aria-label="Principale">
+          <a href="../index.html" data-i18n="nav.home">Accueil</a>
+          <a href="../travaux.html" aria-current="page" data-i18n="nav.works">Travaux</a>
+          <a href="../a-propos.html" data-i18n="nav.about">À propos</a>
+          <a href="../contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="case-page">
+    <header class="page-hero case-page__hero">
+      <div class="wrap reveal">
+        <p class="case-kicker"><a href="../travaux.html" data-i18n="common.backWorks">← Travaux</a> · <span data-i18n="hh.kicker">Application bureau</span></p>
+        <h1>Horloge Houriez</h1>
+        <p data-i18n="hh.lead">Horloge Windows au design sur mesure — cadran spiralé, aiguilles animées en temps réel. L'heure affichée suit l'horloge système de l'utilisateur, correcte dans son pays et son fuseau.</p>
+        <ul class="stack-tags case-page__tags">
+          <li data-i18n="hh.tag.tauri">Tauri</li>
+          <li data-i18n="hh.tag.rust">Rust</li>
+          <li data-i18n="hh.tag.webview">WebView2</li>
+          <li data-i18n="hh.tag.ui">HTML · CSS · JS</li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="case-stats wrap reveal" data-i18n-aria="hh.stats.aria" aria-label="En chiffres">
+      <div class="case-stats__item">
+        <span class="case-stats__num">1</span>
+        <span class="case-stats__label" data-i18n="hh.stats.exe">exe Windows</span>
+      </div>
+      <div class="case-stats__item">
+        <span class="case-stats__num">3</span>
+        <span class="case-stats__label" data-i18n="hh.stats.hands">aiguilles animées</span>
+      </div>
+      <div class="case-stats__item">
+        <span class="case-stats__num">∞</span>
+        <span class="case-stats__label" data-i18n="hh.stats.tz">fuseaux couverts</span>
+      </div>
+    </section>
+
+    <section class="case-feature wrap reveal" data-i18n-aria="hh.preview.aria" aria-label="Aperçu principal">
+      <figure class="horloge-frame horloge-frame--hero">
+        <img src="../assets/horloge-houriez/horloge-houriez.png" data-i18n-alt="hh.hero.alt" alt="Horloge Houriez — cadran spiralé avec étoiles dorées et aiguilles en temps réel" width="345" height="281" loading="eager" />
+        <figcaption data-i18n="hh.hero.caption">Capture live — l'horloge tourne réellement</figcaption>
+      </figure>
+    </section>
+
+    <section class="section">
+      <div class="wrap prose reveal">
+        <h2 data-i18n="hh.h2.story">L'histoire (en bref)</h2>
+        <p data-i18n="hh.story">L'idée m'a été donnée par un ami — Houriez. Il m'a parlé d'une horloge qui ne ressemblerait à aucune autre : une spirale à la place du cadran rond, des étoiles aux points cardinaux, des billes le long des orbites, une signature « Trophy Lights ». J'ai pris ce brief visuel et l'ai transformé en application bureau qui tourne vraiment — le même objet poétique, mais vivant sur l'écran.</p>
+
+        <h2 data-i18n="hh.h2.what">Ce que c'est (en clair)</h2>
+        <p data-i18n-html="hh.p1">Une <strong>horloge de bureau Windows</strong> livrée en exécutable autonome (<code>HorlogeHouriez.exe</code>). Le cadran reprend un design organique : spirale, étoiles dorées aux points cardinaux, billes chromées le long des orbites, signature <strong>TROPHY LIGHTS BY HOURIEZ</strong>.</p>
+        <p data-i18n-html="hh.p2"><strong>Elle marche.</strong> Les trois aiguilles tournent en continu (heures, minutes, secondes). L'heure affichée est celle de l'horloge système de la machine — donc l'heure locale exacte de l'utilisateur, <strong>quel que soit son pays</strong>, sans réglage manuel ni serveur distant.</p>
+
+        <h2 data-i18n="hh.h2.built">Ce que j'ai construit</h2>
+        <ul>
+          <li data-i18n-html="hh.li1"><strong>Interface sur mesure</strong> — cadran spiralé, assets visuels, animation des aiguilles</li>
+          <li data-i18n-html="hh.li2"><strong>Temps réel</strong> — synchronisation sur l'horloge OS (fuseau local automatique)</li>
+          <li data-i18n-html="hh.li3"><strong>Packaging bureau</strong> — exécutable Windows prêt à lancer, fenêtre dédiée</li>
+          <li data-i18n-html="hh.li4"><strong>Stack Tauri</strong> — Rust côté natif, frontend web embarqué via WebView2</li>
+        </ul>
+
+        <h2 data-i18n="hh.h2.tech">Sous le capot (version courte)</h2>
+        <p data-i18n-html="hh.p3">Ce n'est pas Flutter : l'app est compilée avec <strong>Tauri 2</strong> (Rust + WebView2). Le cadran est rendu en HTML/CSS/JS dans une WebView embarquée ; l'heure vient de l'API <code>Date</code> JavaScript, calée sur l'horloge système Windows — même principe qu'une horloge de bureau classique, mais avec ce design spiralé.</p>
+        <p data-i18n="hh.p4">Projet compact, orienté craft visuel et fiabilité : une horloge qui se lance, tourne, et affiche la bonne heure partout où Windows connaît le fuseau local.</p>
+
+        <a class="live-link" href="../travaux.html" data-i18n="hh.back">← Retour aux travaux</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span data-i18n="common.footerShort">© Phare numérique</span>
+      <span class="site-footer__links">
+        <a href="../index.html" class="mobile-exit-link" data-clear-mobile data-i18n="common.desktopVersion">Version bureau</a>
+        <a href="../contact.html" data-i18n="common.discuss">Discuter d'un projet</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js?v=20260814" defer></script>
+  <script src="../js/nav-menu.js?v=20260814" defer></script>
+  <script src="../js/matrix.js?v=20260814" defer></script>
+  <script src="../js/main.js?v=20260814" defer></script>
+</body>
+</html>
