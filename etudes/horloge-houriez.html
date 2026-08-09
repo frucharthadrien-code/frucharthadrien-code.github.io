@@ -70,10 +70,10 @@
     <section class="section">
       <div class="wrap prose reveal">
         <h2 data-i18n="hh.h2.story">L'histoire (en bref)</h2>
-        <p data-i18n="hh.story">L'idée m'a été donnée par un ami — Houriez. Il m'a parlé d'une horloge qui ne ressemblerait à aucune autre : une spirale à la place du cadran rond, des étoiles aux points cardinaux, des billes le long des orbites, une signature « Trophy Lights ». J'ai pris ce brief visuel et l'ai transformé en application bureau qui tourne vraiment — le même objet poétique, mais vivant sur l'écran.</p>
+        <p data-i18n="hh.story">En 1959, Christian Hourriez — élève à l'École Boulle — remporte un concours de la RTF avec un cadran original : les heures réparties sur une spirale, surnommée la « pendule escargot ». Diffusée à l'antenne de l'ORTF de 1959 à 1974, elle servait de mire : les téléspectateurs réglaient leur montre devant la télé. Un horloger fabriqua ensuite une version domestique — la célèbre pendule Trophy. Un ami m'a suggéré de la faire revivre à l'écran ; j'ai développé cette application bureau fidèle à l'esprit du modèle d'origine.</p>
 
         <h2 data-i18n="hh.h2.what">Ce que c'est (en clair)</h2>
-        <p data-i18n-html="hh.p1">Une <strong>horloge de bureau Windows</strong> livrée en exécutable autonome (<code>HorlogeHouriez.exe</code>). Le cadran reprend un design organique : spirale, étoiles dorées aux points cardinaux, billes chromées le long des orbites, signature <strong>TROPHY LIGHTS BY HOURIEZ</strong>.</p>
+        <p data-i18n-html="hh.p1">Une <strong>horloge de bureau Windows</strong> livrée en exécutable autonome (<code>HorlogeHouriez.exe</code>). Le cadran reprend le design iconique : spirale, étoiles aux points cardinaux, billes le long des orbites, boîtier aux formes arrondies — comme la pendule Trophy ORTF d'origine.</p>
         <p data-i18n-html="hh.p2"><strong>Elle marche.</strong> Les trois aiguilles tournent en continu (heures, minutes, secondes). L'heure affichée est celle de l'horloge système de la machine — donc l'heure locale exacte de l'utilisateur, <strong>quel que soit son pays</strong>, sans réglage manuel ni serveur distant.</p>
 
         <h2 data-i18n="hh.h2.built">Ce que j'ai construit</h2>
@@ -85,7 +85,7 @@
         </ul>
 
         <h2 data-i18n="hh.h2.tech">Sous le capot (version courte)</h2>
-        <p data-i18n-html="hh.p3">Ce n'est pas Flutter : l'app est compilée avec <strong>Tauri 2</strong> (Rust + WebView2). Le cadran est rendu en HTML/CSS/JS dans une WebView embarquée ; l'heure vient de l'API <code>Date</code> JavaScript, calée sur l'horloge système Windows — même principe qu'une horloge de bureau classique, mais avec ce design spiralé.</p>
+        <p data-i18n-html="hh.p3">L'app est compilée avec <strong>Tauri 2</strong> (Rust + WebView2). Le cadran est rendu en HTML/CSS/JS dans une WebView embarquée ; l'heure vient de l'API <code>Date</code> JavaScript, calée sur l'horloge système Windows — même principe qu'une horloge de bureau classique, avec ce design spiralé.</p>
         <p data-i18n="hh.p4">Projet compact, orienté craft visuel et fiabilité : une horloge qui se lance, tourne, et affiche la bonne heure partout où Windows connaît le fuseau local.</p>
 
         <a class="live-link" href="../travaux.html" data-i18n="hh.back">← Retour aux travaux</a>
