@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Share+Tech+Mono&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css?v=20260815" />
-  <script src="js/mobile-persist.js?v=20260815"></script>
+  <link rel="stylesheet" href="css/main.css?v=20260818" />
+  <script src="js/mobile-persist.js?v=20260818"></script>
 </head>
 <body data-page="contact">
   <canvas id="matrix-canvas" class="matrix-canvas" aria-hidden="true"></canvas>
@@ -33,15 +33,60 @@
   <main id="main">
     <header class="page-hero">
       <div class="wrap reveal">
-        <h1 data-i18n="contact.title">Contact</h1>
-        <p data-i18n="contact.lead">Un projet web, une migration ou une app mobile ? Écrivez-moi.</p>
+        <h1 data-i18n="contact.title">Parlons de votre projet</h1>
+        <p data-i18n="contact.lead">Décrivez où vous en êtes — je réponds sous 48 h.</p>
       </div>
     </header>
 
-    <section class="section">
-      <div class="wrap prose reveal">
-        <p><a class="live-link" href="mailto:frucharthadrien@gmail.com" data-i18n="contact.email">frucharthadrien@gmail.com</a></p>
-        <p data-i18n="contact.note">Réponse sous 48 h · français, anglais, russe.</p>
+    <section class="section section--contact">
+      <div class="wrap contact-layout reveal">
+        <p class="contact-form__filter" data-i18n="contact.filter">Projets web et logiciels sur mesure — pas d'assistance informatique (PC, Word, Outlook, imprimante…).</p>
+
+        <p class="contact-form__warn" id="contact-file-warning" hidden data-i18n="contact.fileWarning">Le formulaire ne fonctionne pas en double-clic sur le fichier HTML. Ouvrez le site via GitHub Pages ou un serveur local (voir ci-dessous).</p>
+
+        <form class="contact-form" id="contact-form" action="https://formsubmit.co/frucharthadrien@gmail.com" method="post" data-i18n-aria="contact.form.aria" aria-label="Formulaire de contact">
+          <input type="hidden" name="_subject" value="Phare numérique — nouveau contact" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" id="formsubmit-next" value="https://frucharthadrien-code.github.io/contact-envoye.html" />
+          <input type="hidden" name="_replyto" id="formsubmit-replyto" value="" />
+          <input type="text" name="_honey" class="contact-form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="form-field">
+            <label for="contact-prenom" data-i18n="contact.field.prenom">Prénom</label>
+            <input type="text" id="contact-prenom" name="Prénom" required autocomplete="given-name" maxlength="80" />
+          </div>
+
+          <div class="form-field">
+            <label for="contact-email" data-i18n="contact.field.email">E-mail</label>
+            <input type="email" id="contact-email" name="Email" required autocomplete="email" maxlength="120" inputmode="email" />
+          </div>
+
+          <div class="form-field">
+            <label for="contact-need" data-i18n="contact.field.need">Votre besoin</label>
+            <select id="contact-need" name="Besoin" required>
+              <option value="" disabled selected data-i18n="contact.need.placeholder">Choisissez…</option>
+              <option value="Migration ou refonte de site web" data-i18n="contact.need.migration">Migration ou refonte de site web</option>
+              <option value="Site WordPress sur mesure" data-i18n="contact.need.wordpress">Site WordPress sur mesure</option>
+              <option value="Application Android" data-i18n="contact.need.android">Application Android</option>
+              <option value="Petit logiciel Windows (scope simple)" data-i18n="contact.need.desktop">Petit logiciel Windows (scope simple)</option>
+              <option value="Autre projet web ou Android" data-i18n="contact.need.other">Autre projet web ou Android</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-project" data-i18n="contact.field.project">Votre projet</label>
+            <textarea id="contact-project" name="Projet" required rows="5" maxlength="4000" data-i18n-placeholder="contact.project.placeholder" placeholder="Ex. : migrer mon site Wix (6 pages) vers WordPress · app Android type catalogue · petit exe Windows"></textarea>
+          </div>
+
+          <button class="btn btn--primary contact-form__submit" type="submit" data-i18n="contact.submit">Envoyer ma demande</button>
+          <p class="contact-form__trust" data-i18n="contact.trust">Réponse sous 48 h · sans engagement · FR / EN / RU</p>
+        </form>
+
+        <p class="contact-form__alt">
+          <span data-i18n="contact.alt">Ou par e-mail :</span>
+          <a class="live-link" href="mailto:frucharthadrien@gmail.com" data-i18n="contact.email">frucharthadrien@gmail.com</a>
+        </p>
       </div>
     </section>
   </main>
@@ -56,9 +101,10 @@
     </div>
   </footer>
 
-  <script src="js/i18n.js?v=20260815" defer></script>
-  <script src="js/nav-menu.js?v=20260815" defer></script>
-  <script src="js/matrix.js?v=20260815" defer></script>
-  <script src="js/main.js?v=20260815" defer></script>
+  <script src="js/i18n.js?v=20260818" defer></script>
+  <script src="js/nav-menu.js?v=20260818" defer></script>
+  <script src="js/matrix.js?v=20260818" defer></script>
+  <script src="js/main.js?v=20260818" defer></script>
+  <script src="js/contact-form.js?v=20260818" defer></script>
 </body>
 </html>
