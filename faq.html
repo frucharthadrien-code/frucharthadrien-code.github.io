@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <title>FAQ — Phare numérique</title>
+  <meta name="description" content="Questions fréquentes — remote, WordPress, Android, tarifs, délais." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Share+Tech+Mono&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css?v=20260826" />
+  <script src="js/mobile-persist.js?v=20260826"></script>
+</head>
+<body data-page="faq">
+  <canvas id="matrix-canvas" class="matrix-canvas" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main" data-i18n="common.skip">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html"><span data-i18n="brand.line1">Phare</span> <span data-i18n="brand.line2" class="brand__accent">numérique</span></a>
+      <div class="nav-bar">
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" data-i18n="common.menu">Menu</button>
+        <nav class="nav nav-panel" id="site-nav" data-nav data-i18n-aria="common.navLabel" aria-label="Principale">
+          <a href="index.html" data-i18n="nav.home">Accueil</a>
+          <a href="travaux.html" data-i18n="nav.works">Travaux</a>
+          <a href="a-propos.html" data-i18n="nav.about">À propos</a>
+          <a href="faq.html" aria-current="page" data-i18n="nav.faq">FAQ</a>
+          <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-hero">
+      <div class="wrap reveal">
+        <h1 data-i18n="faq.title">Questions fréquentes</h1>
+        <p data-i18n="faq.lead">Ce qu'on me demande le plus souvent avant de démarrer.</p>
+      </div>
+    </header>
+
+    <section class="section section--faq">
+      <div class="wrap contact-layout">
+        <div class="faq-list reveal">
+          <details class="faq-item">
+            <summary data-i18n="faq.q1">Comment ça se passe au départ ?</summary>
+            <p data-i18n="faq.a1">Vous décrivez votre projet via le formulaire ou par e-mail. Je vous réponds sous 48 h avec des questions de cadrage, puis un devis ou une fourchette selon le périmètre.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq.q2">Vous travaillez à distance ?</summary>
+            <p data-i18n="faq.a2">Oui, 100 % remote. Échanges par e-mail, visio si besoin. Français, anglais et russe.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq.q3">Vous reprenez un site existant ?</summary>
+            <p data-i18n="faq.a3">Oui — migration Wix → WordPress, correction, formulaires, mise en prod (ex. o2switch). Je m'adapte à l'existant ; pas de refonte totale sans l'avoir cadrée ensemble.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq.q4">Faites-vous du dépannage informatique ?</summary>
+            <p data-i18n="faq.a4">Non. Je développe des sites et des applications sur mesure — pas assistance PC, Word, Outlook ou imprimante.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq.q5">Applications mobile : iOS aussi ?</summary>
+            <p data-i18n="faq.a5">Android uniquement pour l'instant (Flutter). Pas de publication App Store iOS.</p>
+          </details>
+          <details class="faq-item">
+            <summary data-i18n="faq.q6">Combien ça coûte ?</summary>
+            <p data-i18n="faq.a6">Ça dépend du périmètre. Fourchettes indicatives HT : intervention ponctuelle dès 350 € (demi-journée), chantier web (migration Wix, WordPress, formulaires) dès 450 € / jour — souvent en forfait. App Android ou petit exe Windows : sur devis, dès 500 € / jour. Devis gratuit et précis après échange sur votre besoin — périmètre cadré, pas de mauvaise surprise.</p>
+          </details>
+        </div>
+        <p class="faq-cta reveal">
+          <a class="btn btn--primary" href="contact.html" data-i18n="index.cta.contact">Me contacter</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span data-i18n="common.footerShort">© Phare numérique</span>
+      <span class="site-footer__links">
+        <a href="faq.html" aria-current="page" data-i18n="common.faqLink">FAQ</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="index.html" class="mobile-exit-link" data-clear-mobile data-i18n="common.desktopVersion">Version bureau</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js?v=20260826" defer></script>
+  <script src="js/nav-menu.js?v=20260826" defer></script>
+  <script src="js/matrix.js?v=20260826" defer></script>
+  <script src="js/main.js?v=20260826" defer></script>
+</body>
+</html>

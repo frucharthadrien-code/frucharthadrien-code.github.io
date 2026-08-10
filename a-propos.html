@@ -3,13 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
   <title>À propos — Phare numérique</title>
-  <meta name="description" content="Développeur web &amp; mobile à distance — WordPress, Flutter." />
+  <meta name="description" content="Développeur web &amp; mobile à distance — WordPress, Flutter, remote FR/EN/RU." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Share+Tech+Mono&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css?v=20260815" />
-  <script src="js/mobile-persist.js?v=20260815"></script>
+  <link rel="stylesheet" href="css/main.css?v=20260826" />
+  <script src="js/mobile-persist.js?v=20260826"></script>
 </head>
 <body data-page="about">
   <canvas id="matrix-canvas" class="matrix-canvas" aria-hidden="true"></canvas>
@@ -24,6 +26,7 @@
           <a href="index.html" data-i18n="nav.home">Accueil</a>
           <a href="travaux.html" data-i18n="nav.works">Travaux</a>
           <a href="a-propos.html" aria-current="page" data-i18n="nav.about">À propos</a>
+          <a href="faq.html" data-i18n="nav.faq">FAQ</a>
           <a href="contact.html" data-i18n="nav.contact">Contact</a>
         </nav>
       </div>
@@ -42,6 +45,22 @@
       <div class="wrap prose reveal">
         <p data-i18n="about.p1">Je conçois et développe des sites WordPress sur mesure, des migrations propres et des applications Flutter — en remote, avec un dialogue clair et des livrables qui tiennent la route.</p>
         <p data-i18n="about.p2">Je travaille avec des clients qui veulent un interlocuteur technique fiable, pas une usine à templates.</p>
+
+        <h2 data-i18n="about.h2.path">Parcours</h2>
+        <p data-i18n="about.p3">Formé au développement web et mobile, j'ai livré des projets concrets — migration WordPress pour un coach (Fruchart Équilibre), application Flutter (Meet'n'Sing), horloge bureau Windows en Tauri (Horloge Houriez). Chaque dossier part d'un brief réel, avec du code versionné et une mise en prod quand c'est prévu.</p>
+
+        <h2 data-i18n="about.h2.stack">Stack &amp; livrables</h2>
+        <ul>
+          <li data-i18n="about.stack1">WordPress sur mesure, Elementor, PHP (mu-plugins, SMTP, Schema.org)</li>
+          <li data-i18n="about.stack2">Migrations Wix → WordPress, formulaires, SEO de base, hébergement (ex. o2switch)</li>
+          <li data-i18n="about.stack3">Applications Android Flutter — interface, logique métier, livraison APK</li>
+          <li data-i18n="about.stack4">Desktop léger Tauri / exe Windows pour petits outils métier</li>
+          <li data-i18n="about.stack5">HTML, CSS, JavaScript — ce portfolio lui-même</li>
+        </ul>
+
+        <h2 data-i18n="about.h2.zone">Langues &amp; zone</h2>
+        <p data-i18n="about.p4">100 % remote. Échanges en français, anglais et russe. Clients en France, Union européenne et russophones à l'international — pas de dépannage PC ni assistance bureautique.</p>
+
         <a class="btn btn--primary" href="contact.html" data-i18n="index.cta.contact">Me contacter</a>
       </div>
     </section>
@@ -50,14 +69,15 @@
   <footer class="site-footer">
     <div class="site-footer__inner">
       <span data-i18n="common.footerShort">© Phare numérique</span>
+      <a href="faq.html" data-i18n="common.faqLink">FAQ</a>
       <a href="contact.html" data-i18n="common.contactLink">Contact</a>
       <a href="index.html" class="mobile-exit-link" data-clear-mobile data-i18n="common.desktopVersion">Version bureau</a>
     </div>
   </footer>
 
-  <script src="js/i18n.js?v=20260815" defer></script>
-  <script src="js/nav-menu.js?v=20260815" defer></script>
-  <script src="js/matrix.js?v=20260815" defer></script>
-  <script src="js/main.js?v=20260815" defer></script>
+  <script src="js/i18n.js?v=20260826" defer></script>
+  <script src="js/nav-menu.js?v=20260826" defer></script>
+  <script src="js/matrix.js?v=20260826" defer></script>
+  <script src="js/main.js?v=20260826" defer></script>
 </body>
 </html>

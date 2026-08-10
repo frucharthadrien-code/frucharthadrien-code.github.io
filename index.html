@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
   <title>Phare numérique — Développement web &amp; mobile à distance</title>
   <meta name="description" content="Phare numérique — WordPress, Elementor, PHP et Flutter. Sites sur mesure, migrations, apps — à distance." />
   <meta property="og:title" content="Phare numérique — Développement web & mobile" />
@@ -12,8 +14,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Share+Tech+Mono&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css?v=20260815" />
-  <script src="js/mobile-persist.js?v=20260815"></script>
+  <link rel="stylesheet" href="css/main.css?v=20260826" />
+  <script src="js/mobile-persist.js?v=20260826"></script>
 </head>
 <body data-page="index">
   <canvas id="matrix-canvas" class="matrix-canvas" aria-hidden="true"></canvas>
@@ -28,6 +30,7 @@
           <a href="index.html" aria-current="page" data-i18n="nav.home">Accueil</a>
           <a href="travaux.html" data-i18n="nav.works">Travaux</a>
           <a href="a-propos.html" data-i18n="nav.about">À propos</a>
+          <a href="faq.html" data-i18n="nav.faq">FAQ</a>
           <a href="contact.html" data-i18n="nav.contact">Contact</a>
         </nav>
       </div>
@@ -53,6 +56,35 @@
             <img src="assets/portrait.jpg" alt="" width="720" height="960" decoding="async" />
           </div>
         </figure>
+      </div>
+    </section>
+
+    <section class="section section--situations" aria-labelledby="situations-title">
+      <div class="wrap">
+        <p class="eyebrow reveal" data-i18n="index.sit.eyebrow">Interventions</p>
+        <h2 class="situations-title reveal" id="situations-title" data-i18n="index.sit.title">Les situations les plus fréquentes</h2>
+        <ul class="situations-grid">
+          <li class="situation-card reveal">
+            <h3 class="situation-card__title" data-i18n="index.sit.c1.title">Migration ou refonte</h3>
+            <p class="situation-card__desc" data-i18n="index.sit.c1.desc">Quitter Wix ou refaire un site qui ne convient plus — WordPress propre, contenu repris, mise en ligne.</p>
+            <a class="situation-card__link" href="contact.html" data-i18n="index.sit.cta">En parler →</a>
+          </li>
+          <li class="situation-card reveal">
+            <h3 class="situation-card__title" data-i18n="index.sit.c2.title">Site WordPress sur mesure</h3>
+            <p class="situation-card__desc" data-i18n="index.sit.c2.desc">Vitrine, formulaires, évolution technique, mise en prod (o2switch ou autre hébergeur).</p>
+            <a class="situation-card__link" href="contact.html" data-i18n="index.sit.cta">En parler →</a>
+          </li>
+          <li class="situation-card reveal">
+            <h3 class="situation-card__title" data-i18n="index.sit.c3.title">Application Android</h3>
+            <p class="situation-card__desc" data-i18n="index.sit.c3.desc">App Flutter livrée end-to-end. Android uniquement — pas d'App Store iOS pour l'instant.</p>
+            <a class="situation-card__link" href="contact.html" data-i18n="index.sit.cta">En parler →</a>
+          </li>
+          <li class="situation-card reveal">
+            <h3 class="situation-card__title" data-i18n="index.sit.c4.title">Petit logiciel Windows</h3>
+            <p class="situation-card__desc" data-i18n="index.sit.c4.desc">Outil bureau simple (type horloge, utilitaire). Scope limité — pas de logiciel métier complexe.</p>
+            <a class="situation-card__link" href="contact.html" data-i18n="index.sit.cta">En parler →</a>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -94,12 +126,21 @@
         </ul>
       </div>
     </section>
+
+    <section class="home-cta section" aria-labelledby="home-cta-title">
+      <div class="wrap reveal">
+        <h2 class="home-cta__title" id="home-cta-title" data-i18n="index.homeCta.title">Parlons de votre projet</h2>
+        <p class="home-cta__lead" data-i18n="index.homeCta.lead">Décrivez où vous en êtes — réponse sous 48 h, sans engagement.</p>
+        <a class="btn btn--primary" href="contact.html" data-i18n="index.cta.contact">Me contacter</a>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="site-footer__inner">
       <span data-i18n="common.footerTag">© Phare numérique — WordPress · Flutter · à distance</span>
       <span class="site-footer__links">
+        <a href="faq.html" data-i18n="common.faqLink">FAQ</a>
         <a href="mobile.html" class="mobile-enter-link" data-set-mobile data-i18n="common.mobileVersion">Version mobile</a>
         <a href="index.html" class="mobile-exit-link" data-clear-mobile data-i18n="common.desktopVersion">Version bureau</a>
         <a href="mailto:frucharthadrien@gmail.com">frucharthadrien@gmail.com</a>
@@ -107,10 +148,10 @@
     </div>
   </footer>
 
-  <script src="js/i18n.js?v=20260815" defer></script>
-  <script src="js/nav-menu.js?v=20260815" defer></script>
-  <script src="js/matrix.js?v=20260815" defer></script>
-  <script src="js/portrait-gommage.js?v=20260815" defer></script>
-  <script src="js/main.js?v=20260815" defer></script>
+  <script src="js/i18n.js?v=20260826" defer></script>
+  <script src="js/nav-menu.js?v=20260826" defer></script>
+  <script src="js/matrix.js?v=20260826" defer></script>
+  <script src="js/portrait-gommage.js?v=20260826" defer></script>
+  <script src="js/main.js?v=20260826" defer></script>
 </body>
 </html>

@@ -3,13 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
   <title>Contact — Phare numérique</title>
   <meta name="description" content="Me contacter pour un projet web ou mobile." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Share+Tech+Mono&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css?v=20260820" />
-  <script src="js/mobile-persist.js?v=20260820"></script>
+  <link rel="stylesheet" href="css/main.css?v=20260826" />
+  <script src="js/mobile-persist.js?v=20260826"></script>
 </head>
 <body data-page="contact">
   <canvas id="matrix-canvas" class="matrix-canvas" aria-hidden="true"></canvas>
@@ -24,6 +26,7 @@
           <a href="index.html" data-i18n="nav.home">Accueil</a>
           <a href="travaux.html" data-i18n="nav.works">Travaux</a>
           <a href="a-propos.html" data-i18n="nav.about">À propos</a>
+          <a href="faq.html" data-i18n="nav.faq">FAQ</a>
           <a href="contact.html" aria-current="page" data-i18n="nav.contact">Contact</a>
         </nav>
       </div>
@@ -41,6 +44,10 @@
     <section class="section section--contact">
       <div class="wrap contact-layout reveal">
         <p class="contact-form__filter" data-i18n="contact.filter">Projets web et logiciels sur mesure — pas d'assistance informatique (PC, Word, Outlook, imprimante…).</p>
+
+        <p class="contact-faq-link reveal">
+          <a href="faq.html" data-i18n="common.faqTeaser">Questions fréquentes →</a>
+        </p>
 
         <p class="contact-form__warn" id="contact-file-warning" hidden data-i18n="contact.fileWarning">Le formulaire ne fonctionne pas en double-clic sur le fichier HTML. Ouvrez le site via GitHub Pages ou un serveur local (voir ci-dessous).</p>
 
@@ -96,16 +103,17 @@
     <div class="site-footer__inner">
       <span data-i18n="common.footerShort">© Phare numérique</span>
       <span class="site-footer__links">
+        <a href="faq.html" data-i18n="common.faqLink">FAQ</a>
         <a href="travaux.html" data-i18n="nav.works">Travaux</a>
         <a href="index.html" class="mobile-exit-link" data-clear-mobile data-i18n="common.desktopVersion">Version bureau</a>
       </span>
     </div>
   </footer>
 
-  <script src="js/i18n.js?v=20260820" defer></script>
-  <script src="js/nav-menu.js?v=20260820" defer></script>
-  <script src="js/matrix.js?v=20260820" defer></script>
-  <script src="js/main.js?v=20260820" defer></script>
-  <script src="js/contact-form.js?v=20260820" defer></script>
+  <script src="js/i18n.js?v=20260826" defer></script>
+  <script src="js/nav-menu.js?v=20260826" defer></script>
+  <script src="js/matrix.js?v=20260826" defer></script>
+  <script src="js/main.js?v=20260826" defer></script>
+  <script src="js/contact-form.js?v=20260826" defer></script>
 </body>
 </html>
