@@ -3,7 +3,7 @@
  */
 (function () {
   var LIVE_CONFIRM =
-    "https://frucharthadrien-code.github.io/contact-envoye.html";
+    "https://phare-numerique.github.io/contact-envoye.html";
   var form = document.getElementById("contact-form");
   var nextInput = document.getElementById("formsubmit-next");
   var replyInput = document.getElementById("formsubmit-replyto");
